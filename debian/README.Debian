@@ -1,6 +1,8 @@
 atomic for Debian
 ----------------
 
-<possible notes regarding this package - if none, delete this file>
+The atomic host command is not operational on Debian based OS. atomic tool is
+limited to docker container management and LABEL parsing to install/uninstall
+containers in the system.
 
  -- Philippe Thierry <phil@reseau-libre.net>  Tue, 16 May 2017 09:21:10 +0200
