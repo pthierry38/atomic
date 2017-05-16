@@ -13,6 +13,10 @@ export PYBUILD_NAME=atomic
 override_dh_installinit:
 	dh_installinit -patomic --name=atomic --no-start --update-rcd-params='disable 2345'
 
+override_dh_auto_build:
+	dh_auto_build
+	make docs
+
 override_dh_install:
 	dh_install -O--buildsystem=pybuild
 	rm -rf $(CURDIR)/debian/openscap-daemon/usr/lib/python3/dist-packages/openscap_daemon/__pycache__
