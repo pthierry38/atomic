@@ -1,5 +1,5 @@
 Source: atomic
-Section: python
+Section: admin
 Priority: optional
 Maintainer: Philippe Thierry <phil@reseau-libre.net>
 Build-Depends:
@@ -26,7 +26,7 @@ Homepage: https://github.com/projectatomic/atomic
 Vcs-Git: https://github.com/pthierry38/atomic.git
 Vcs-Browser: https://github.com/pthierry38/atomic
 
-Package: python3-atomic
+Package: atomic
 Architecture: all
 Depends:
  ${python3:Depends},
@@ -46,7 +46,7 @@ Depends:
  python3-urllib3
 Multi-Arch: foreign
 Suggests:
- python3-atomic-doc,
+ atomic-doc,
  docker
 Description: allows a provider to specify how a container expects to be run
  The goal of Atomic is to provide a high level, coherent entrypoint 
@@ -55,7 +55,7 @@ Description: allows a provider to specify how a container expects to be run
  For Docker, atomic can make it easier to interact with special kinds
  of containers, such as super-privileged debugging tools and the like.
 
-Package: python3-atomic-doc
+Package: atomic-doc
 Architecture: all
 Section: doc
 Depends: ${sphinxdoc:Depends}, ${misc:Depends}
