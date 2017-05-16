@@ -3,7 +3,7 @@ Section: admin
 Priority: optional
 Maintainer: Philippe Thierry <phil@reseau-libre.net>
 Build-Depends:
- debhelper (>=9),
+ debhelper (>=10),
  dh-python,
  go-md2man,
  python3 (>= 3.2),
@@ -60,5 +60,8 @@ Architecture: all
 Section: doc
 Depends: ${sphinxdoc:Depends}, ${misc:Depends}
 Description: All documentations for atomic Python service 
- Install various documentations 
-
+ Install various documentations, including design architecture in pdf format
+ and some various documentation about the goal of the Atomic tool.
+ .
+ Various documentation and code architecture is keeped separated
+ due to its size.
