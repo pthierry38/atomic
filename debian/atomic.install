@@ -1,5 +1,4 @@
 /usr/lib
 /usr/share
 /etc
-/usr/bin/atomic_dbus.py /usr/bin/atomic_dbus
-/usr/bin/atomic /usr/bin/atomic
+/usr/bin

@@ -19,6 +19,7 @@ override_dh_install:
 	dh_install -O--buildsystem=pybuild
 	rm -rf $(CURDIR)/debian/atomic/usr/lib/python3/dist-packages/python3-atomic/__pycache__
 	chmod 0755 $(CURDIR)/debian/atomic/usr/share/bash-completion/completions/atomic
+	mv $(CURDIR)/debian/atomic/usr/bin/atomic_dbus.py $(CURDIR)/debian/atomic/usr/bin/atomic_dbus
 
 %:
 	dh $@  --with python3 --buildsystem=pybuild
