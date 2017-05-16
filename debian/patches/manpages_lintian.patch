@@ -1,0 +1,59 @@
+Description: Clean various errors and spellings in mans
+ This patch clean various man pages directly in the markdown
+ man sources.
+Author: Philippe Thierry
+Last-Update: 2017-05-16
+--- a/docs/atomic-pull.1.md
++++ b/docs/atomic-pull.1.md
+@@ -24,10 +24,10 @@
+ **default_storage**.
+ 
+ IMAGE has the form `SOURCE:IMAGE-NAME`, where `SOURCE` can be one of
+-'oci', 'docker', 'dockertar', 'ostree'.  If no `SOURCE` is specified
+-then 'oci' is assumed.
++oci, docker, dockertar, ostree.  If no `SOURCE` is specified
++then oci is assumed.
+ 
+-An 'oci' image is fetched via Skopeo from a Docker registry.  These
++An oci image is fetched via Skopeo from a Docker registry.  These
+ two commands are equivalent:
+ 
+ `atomic pull etcd`  
+@@ -82,4 +82,4 @@
+ 
+ # HISTORY
+ April 2016, Originally compiled by Giuseppe Scrivano (gscrivan at
+-redhat dot com)
+\ No newline at end of file
++redhat dot com)
+--- a/docs/atomic-sign.1.md
++++ b/docs/atomic-sign.1.md
+@@ -60,7 +60,7 @@
+ configuration files in /etc/containers/registries.d/.  When you sign
+ an image, atomic will use those configuration files to determine
+ where to write the signature based on the the name of the originating
+-registry or a default storage value unless overriden with the -d 
++registry or a default storage value unless overridden with the -d 
+ option. For example, consider the following configuration file.
+ 
+ docker:
+@@ -80,7 +80,7 @@
+     sigstore: https://www.example.com/signatures/
+ 
+ Now any image from the john repository will use the sigstore-staging location of
+-'/mnt/export/signatures'.  Also note the use of sigstore-staging versus sigstore. This
++/mnt/export/signatures.  Also note the use of sigstore-staging versus sigstore. This
+ means that signatures should be written to that location but read should occur from
+ the http URL provided.
+ 
+--- a/docs/atomic.1.md
++++ b/docs/atomic.1.md
+@@ -6,7 +6,7 @@
+ 
+ # SYNOPSIS
+ **atomic** [OPTIONS] COMMAND [arg...]
+-  {containers,diff,images,install,mount,pull,push,run,scan,sign,stop,storage,migrate,top,trust,uninstall,unmount,umount,update,verify,version}
++  {containers, diff, images, install, mount, pull, push, run, scan, sign, stop, storage, migrate, top, trust, uninstall, unmount, umount, update, verify, version}
+ 
+ [**-h**|**--help**]
+ 
