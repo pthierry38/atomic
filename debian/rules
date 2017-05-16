@@ -9,7 +9,7 @@ export PYBUILD_INSTALL_ARGS=--install-lib=/usr/lib/python3/dist-packages
 # by default, the service is not started, it must be enabled by update-rc.d or
 # systemd
 override_dh_installinit:
-	dh_installinit -ppython3-atomic --name=atomic --no-start --update-rcd-params='disable 2345'
+	dh_installinit -patomic --name=atomic --no-start --update-rcd-params='disable 2345'
 
 override_dh_auto_build:
 	dh_auto_build
@@ -17,7 +17,7 @@ override_dh_auto_build:
 
 override_dh_install:
 	dh_install -O--buildsystem=pybuild
-	rm -rf $(CURDIR)/debian/openscap-daemon/usr/lib/python3/dist-packages/python3-atomic/__pycache__
+	rm -rf $(CURDIR)/debian/atomic/usr/lib/python3/dist-packages/python3-atomic/__pycache__
 
 %:
 	dh $@  --with python3 --buildsystem=pybuild
