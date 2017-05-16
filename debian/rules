@@ -6,8 +6,6 @@
 # redirect module to correct dist-packages dir
 export PYBUILD_INSTALL_ARGS=--install-lib=/usr/lib/python3/dist-packages
 
-export PYBUILD_NAME=python3-atomic
-
 # by default, the service is not started, it must be enabled by update-rc.d or
 # systemd
 override_dh_installinit:
