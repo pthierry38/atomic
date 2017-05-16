@@ -1,0 +1,26 @@
+#!/usr/bin/make -f
+# See debhelper(7) (uncomment to enable)
+# output every command that modifies files on the build system.
+#export DH_VERBOSE = 1
+
+# redirect module to correct dist-packages dir
+export PYBUILD_INSTALL_ARGS=--install-lib=/usr/lib/python3/dist-packages
+
+export PYBUILD_NAME=atomic
+
+# by default, the service is not started, it must be enabled by update-rc.d or
+# systemd
+override_dh_installinit:
+	dh_installinit -patomic --name=atomic --no-start --update-rcd-params='disable 2345'
+
+override_dh_install:
+	dh_install -O--buildsystem=pybuild
+	rm -rf $(CURDIR)/debian/openscap-daemon/usr/lib/python3/dist-packages/openscap_daemon/__pycache__
+	rm -rf $(CURDIR)/debian/openscap-daemon/usr/lib/python3/dist-packages/openscap_daemon/cve_scanner/__pycache__
+
+
+
+%:
+	dh $@  --with python3 --buildsystem=pybuild
+
+
