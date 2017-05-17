@@ -1,0 +1,9 @@
+Document: atomicdesign
+Title: Atomic run behavior
+Author: Red Hat Inc.
+Abstract: This document describes how atomic translates
+ various fields of the dockerfile to run the container
+Section: System/Administration
+
+Format: PDF
+Files: /usr/share/atomic-doc/atomicdesign.pdf.gz
