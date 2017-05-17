@@ -6,4 +6,4 @@ Abstract: This document describes how atomic translates
 Section: System/Administration
 
 Format: PDF
-Files: /usr/share/atomic-doc/atomicdesign.pdf.gz
+Files: /usr/share/doc/atomic-doc/atomicdesign.pdf.gz
